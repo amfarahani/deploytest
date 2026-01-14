@@ -14,15 +14,15 @@ def index():
 def predict():
     Sepal_Length = request.form['sepal_length']
     Sepal_Width = request.form['sepal_width']
-    Petak_Length = request.form['petal_length']
+    Peta1_Length = request.form['petal_length']
     Petal_Width = request.form['petal_width']
 
     
       
-    pred = model.predict(np.array([[Sepal_Length, Sepal_Width, Petak_Length, Petal_Width ]]))
+    pred = model.predict(np.array([[Sepal_Length, Sepal_Width, Peta1_Length, Petal_Width ]]))
     print(pred)
     return render_template('index.html', predict=str(pred))
 
 
 if __name__ == '__main__':
-    app.run
+    app.run()
