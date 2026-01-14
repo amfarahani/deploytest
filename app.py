@@ -20,4 +20,4 @@ def predict():
     print(pred)
     return render_template('index.html', predict=str(pred))
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
